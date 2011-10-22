@@ -17,9 +17,8 @@ class SoftwareDownloader
 	end
 	
 	def download
-		list = DATA.read
 		
-		list.each_line do |s|
+			@s_list.each_line do |s|
 			puts "Downloading: #{s}..."
 			puts "Press enter to continue."
 			url = @url.gsub(/#{@replace_str}/, "#{s}+download")
@@ -34,7 +33,3 @@ class SoftwareDownloader
 end
 
 SoftwareDownloader.new
-
-__END__
-Firefox
-Audacity
